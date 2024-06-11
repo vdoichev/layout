@@ -11,6 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         MatCardModule,
         ReactiveFormsModule,
         MatGridListModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        MatDividerModule
     ],
   providers: [],
   bootstrap: [AppComponent]

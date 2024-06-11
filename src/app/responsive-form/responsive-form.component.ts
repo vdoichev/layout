@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 
 import { FormBuilder, Validators } from '@angular/forms';
+import {BreakpointObserver, Breakpoints, BreakpointState} from "@angular/cdk/layout";
 
 
 @Component({
@@ -8,8 +9,9 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './responsive-form.component.html',
   styleUrls: ['./responsive-form.component.css']
 })
-export class ResponsiveFormComponent {
+export class ResponsiveFormComponent implements OnInit{
   private fb = inject(FormBuilder);
+  public isSmall: boolean;
   addressForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],
@@ -90,5 +92,27 @@ export class ResponsiveFormComponent {
 
   onSubmit(): void {
     alert('Thanks!');
+  }
+
+  constructor(
+    private _breakpointObserver: BreakpointObserver,
+  ) {
+    this.isSmall = false;
+  }
+
+  ngOnInit(): void {
+    this.initBreakpointObserver();
+  }
+
+  /** відстежування розміра екрану */
+  private initBreakpointObserver() {
+    this._breakpointObserver
+      .observe([
+        Breakpoints.HandsetLandscape,
+        Breakpoints.HandsetPortrait,
+      ])
+      .subscribe((state: BreakpointState) => {
+        this.isSmall = state.matches;
+      });
   }
 }
