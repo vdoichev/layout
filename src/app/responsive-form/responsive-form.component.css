@@ -12,16 +12,24 @@
   margin: 5px 0;
 }
 
-/*.row {*/
-/*  display: flex;*/
-/*  flex-direction: row;*/
-/*}*/
+.row {
+  display: flex;
+  flex-direction: row;
+}
 
-/*.col {*/
-/*  flex: 1;*/
-/*  margin-right: 20px;*/
-/*}*/
+.col {
+  display: flex;
+  flex-direction: column;
+}
 
-.col:last-child {
+.item {
+  flex: 1;
+}
+
+.row .item {
+  margin-right: 20px;
+}
+
+.row .item:last-child {
   margin-right: 0;
 }
