@@ -12,11 +12,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDividerModule} from "@angular/material/divider";
+import { ChartsComponent } from './charts/charts.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import {NgxEchartsModule} from "ngx-echarts";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResponsiveFormComponent
+    ResponsiveFormComponent,
+    ChartsComponent
   ],
     imports: [
         BrowserModule,
@@ -28,7 +33,12 @@ import {MatDividerModule} from "@angular/material/divider";
         ReactiveFormsModule,
         MatGridListModule,
         BrowserAnimationsModule,
-        MatDividerModule
+        MatDividerModule,
+        MatMenuModule,
+        MatIconModule,
+        NgxEchartsModule.forRoot({
+          echarts: () => import('echarts')
+        })
     ],
   providers: [],
   bootstrap: [AppComponent]
