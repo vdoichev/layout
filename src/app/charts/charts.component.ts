@@ -10,29 +10,12 @@ import {Observable} from "rxjs";
   styleUrls: ['./charts.component.css']
 })
 export class ChartsComponent implements OnInit {
-  cards: Observable<any>;
-  constructor(
-    private breakpointObserver: BreakpointObserver
-  ) {
-  this.cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
-        ];
-      }
-
-      return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
-      ];
-    })
-  );
+  cards: any;
+  constructor() {
+  this.cards = [
+      { title: 'Card 1', cols: 1, rows: 2 },
+      { title: 'Card 2', cols: 1, rows: 2 },
+    ];
   }
 
 
