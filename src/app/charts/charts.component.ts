@@ -23,16 +23,23 @@ export class ChartsComponent implements OnInit {
     },
     {
       "name": "Повернуто",
-      "value": 0
+      "value": 23000
     },
-    {
-      "name": "Залишок",
-      "value": 123000
-    },
+    // {
+    //   "name": "Залишок",
+    //   "value": 123000
+    // },
     // {
     //   "name": "Надлишок",
     //   "value": 22000
     // }
+  ];
+
+  single2: any[]= [
+    {
+      "name": "Надлишок",
+      "value": 22000
+    }
   ];
 
   view: any[] = [700, 400];
@@ -63,46 +70,49 @@ export class ChartsComponent implements OnInit {
 
   public options: EChartsOption = {};
   ngOnInit(): void {
-    const xAxisData = [];
-    const data1 = [];
-    const data2 = [];
-
-    for (let i = 0; i < 100; i++) {
-      xAxisData.push('category' + i);
-      data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
-      data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
-    }
 
     this.options = {
+      title: {
+        text: 'Вага вантажної партії - 1 303 000 кг',
+        left: 'center'
+      },
+      darkMode: 'auto',
+      tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b}: {c} кг.'
+      },
       legend: {
-        data: ['bar', 'bar2'],
-        align: 'left',
+        top: '55%',
+        left: 'center',
       },
-      tooltip: {},
-      xAxis: {
-        data: xAxisData,
-        silent: false,
-        splitLine: {
-          show: false,
-        },
-      },
-      yAxis: {},
+      animation: true,
       series: [
         {
-          name: 'bar',
-          type: 'bar',
-          data: data1,
-          animationDelay: idx => idx * 10,
+          label: {
+            formatter: '{b}: {d}%'
+          },
+          color: ['#009473','#004A81','#FFD700', '#008cbc'],
+          name: 'Вага нетто в перепустках',
+          type: 'pie',
+          radius: ['40%', '70%'],
+          center: ['50%', '50%'],
+          // adjust the start and end angle
+          startAngle: 180,
+          endAngle: 360,
+          data: this.single
         },
         {
-          name: 'bar2',
-          type: 'bar',
-          data: data2,
-          animationDelay: idx => idx * 10 + 100,
-        },
-      ],
-      animationEasing: 'elasticOut',
-      animationDelayUpdate: idx => idx * 5,
+          name: 'Вага нетто в перепустках',
+          type: 'pie',
+          color: ['#BE1E2D'],
+          radius: ['0', '20%'],
+          center: ['50%', '50%'],
+          // adjust the start and end angle
+          startAngle: 180,
+          endAngle: 360,
+          data: this.single2
+        }
+      ]
     };
   }
 }
