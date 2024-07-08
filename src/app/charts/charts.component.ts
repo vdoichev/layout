@@ -1,8 +1,6 @@
-import {Component, inject, OnInit} from '@angular/core';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
-import { map } from 'rxjs/operators';
+import {Component, OnInit} from '@angular/core';
 import {EChartsOption} from "echarts";
-import {Observable} from "rxjs";
+import {Color, ScaleType} from "@swimlane/ngx-charts";
 
 @Component({
   selector: 'app-charts',
@@ -10,11 +8,49 @@ import {Observable} from "rxjs";
   styleUrls: ['./charts.component.css']
 })
 export class ChartsComponent implements OnInit {
+  single: any[]= [
+    {
+      "name": "ПОГОДЖЕНО",
+      "value": 250000
+    },
+    {
+      "name": "В ПОРТУ",
+      "value": 380000
+    },
+    {
+      "name": "ОБРОБЛЕНО",
+      "value": 550000
+    },
+    {
+      "name": "ЗАЛИШОК",
+      "value": 123000
+    },
+    {
+      "name": "ПОВЕРНУТО",
+      "value": 25000
+    }
+  ];
+
+  view: any[] = [700, 400];
+
+  // options
+  gradient: boolean = false;
+  showLegend: boolean = true;
+  showLabels: boolean = true;
+  isDoughnut: boolean = false;
+
+  myColorScheme: Color = {
+    name: "test",
+    selectable: true,
+    group: ScaleType.Ordinal,
+    domain: ['#FFD700', '#004A81', '#009473', '#E0E0E0', '#BE1E2D']
+  }
+
   cards: any;
   constructor() {
   this.cards = [
       { title: 'Card 1', cols: 1, rows: 2 },
-      { title: 'Card 2', cols: 1, rows: 2 },
+      { title: 'Card 2', cols: 1, rows: 1 },
     ];
   }
 

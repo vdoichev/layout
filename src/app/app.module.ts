@@ -16,6 +16,7 @@ import { ChartsComponent } from './charts/charts.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import {NgxEchartsModule} from "ngx-echarts";
+import {NgxChartsModule, PieChartModule} from "@swimlane/ngx-charts";
 
 @NgModule({
   declarations: [
@@ -23,23 +24,24 @@ import {NgxEchartsModule} from "ngx-echarts";
     ResponsiveFormComponent,
     ChartsComponent
   ],
-    imports: [
-        BrowserModule,
-        MatInputModule,
-        MatButtonModule,
-        MatSelectModule,
-        MatRadioModule,
-        MatCardModule,
-        ReactiveFormsModule,
-        MatGridListModule,
-        BrowserAnimationsModule,
-        MatDividerModule,
-        MatMenuModule,
-        MatIconModule,
-        NgxEchartsModule.forRoot({
-          echarts: () => import('echarts')
-        })
-    ],
+  imports: [
+    BrowserModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatGridListModule,
+    BrowserAnimationsModule,
+    MatDividerModule,
+    MatMenuModule,
+    MatIconModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
+    PieChartModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

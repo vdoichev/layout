@@ -19,3 +19,17 @@
 .dashboard-card-content {
   text-align: center;
 }
+
+.dashboard-card-content2 {
+  width: 100%;
+  height: calc(100% - 30px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.legend-items-container {
+  height: 100px;
+}
