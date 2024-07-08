@@ -21,6 +21,7 @@
 
         <mat-card-content *ngIf="index===1" class="dashboard-card-content2">
           <ngx-charts-advanced-pie-chart
+            [label]="'Загальна вага вантажної партії, кг'"
             [scheme]="myColorScheme"
             [results]="single"
             [gradient]="gradient"

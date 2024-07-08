@@ -10,25 +10,29 @@ import {Color, ScaleType} from "@swimlane/ngx-charts";
 export class ChartsComponent implements OnInit {
   single: any[]= [
     {
-      "name": "ПОГОДЖЕНО",
-      "value": 250000
-    },
-    {
-      "name": "В ПОРТУ",
-      "value": 380000
-    },
-    {
-      "name": "ОБРОБЛЕНО",
+      "name": "Оброблено",
       "value": 550000
     },
     {
-      "name": "ЗАЛИШОК",
-      "value": 123000
+      "name": "В порту",
+      "value": 380000
     },
     {
-      "name": "ПОВЕРНУТО",
-      "value": 25000
-    }
+      "name": "Погоджено",
+      "value": 250000
+    },
+    {
+      "name": "Повернуто",
+      "value": 0
+    },
+    {
+      "name": "Залишок",
+      "value": 123000
+    },
+    // {
+    //   "name": "Надлишок",
+    //   "value": 22000
+    // }
   ];
 
   view: any[] = [700, 400];
@@ -43,7 +47,7 @@ export class ChartsComponent implements OnInit {
     name: "test",
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#FFD700', '#004A81', '#009473', '#E0E0E0', '#BE1E2D']
+    domain: ['#009473','#004A81','#FFD700', '#BE1E2D','#E0E0E0', '#BE1E2D']
   }
 
   cards: any;
