@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ResponsiveFormComponent } from './responsive-form/responsive-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
@@ -16,13 +15,16 @@ import { ChartsComponent } from './charts/charts.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import {NgxEchartsModule} from "ngx-echarts";
-import {NgxChartsModule, PieChartModule} from "@swimlane/ngx-charts";
+import { PieChartModule} from "@swimlane/ngx-charts";
+import { CargoLotChartComponent } from './charts/cargo-lot-chart/cargo-lot-chart.component';
+import { CargoLotChart2Component } from './charts/cargo-lot-chart2/cargo-lot-chart2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResponsiveFormComponent,
-    ChartsComponent
+    ChartsComponent,
+    CargoLotChartComponent,
+    CargoLotChart2Component
   ],
   imports: [
     BrowserModule,
