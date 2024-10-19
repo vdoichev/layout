@@ -28,7 +28,11 @@ export class CargoLotChart2Component {
   ];
 
   // options
-  gradient: boolean = false;
+  // options
+  gradient: boolean = true;
+  showLegend: boolean = true;
+  showLabels: boolean = true;
+  isDoughnut: boolean = false;
 
   myColorScheme: Color = {
     name: "test",

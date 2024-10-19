@@ -14,7 +14,7 @@
 }
 
 .dashboard-card-content {
-  height: calc(100% - 30px);
+  height: 100%;
   display: flex;
   flex-flow: column;
   justify-content: center;
