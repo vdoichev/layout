@@ -11,7 +11,7 @@ export class ChartsComponent {
   this.cards = [
       { title: 'Вантажна партія 1', cols: 1, rows: 1 },
       { title: 'Вантажна партія 2', cols: 1, rows: 1 },
-      { title: 'Обробка вантажів по порту', cols: 2, rows: 1 },
+      { title: 'Кількість авто з вантажем на експорт за місяць', cols: 2, rows: 2 },
     ];
   }
 }
