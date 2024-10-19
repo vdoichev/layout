@@ -18,13 +18,15 @@ import {NgxEchartsModule} from "ngx-echarts";
 import { PieChartModule} from "@swimlane/ngx-charts";
 import { CargoLotChartComponent } from './charts/cargo-lot-chart/cargo-lot-chart.component';
 import { CargoLotChart2Component } from './charts/cargo-lot-chart2/cargo-lot-chart2.component';
+import { PortOperatorCargoForwarderChartComponent } from './charts/port-operator-cargo-forwarder-chart/port-operator-cargo-forwarder-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChartsComponent,
     CargoLotChartComponent,
-    CargoLotChart2Component
+    CargoLotChart2Component,
+    PortOperatorCargoForwarderChartComponent
   ],
   imports: [
     BrowserModule,

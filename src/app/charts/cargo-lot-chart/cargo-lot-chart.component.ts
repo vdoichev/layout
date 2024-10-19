@@ -25,14 +25,6 @@ export class CargoLotChartComponent implements OnInit {
       "name": "Повернуто",
       "value": 23000
     },
-    // {
-    //   "name": "Залишок",
-    //   "value": 123000
-    // },
-    // {
-    //   "name": "Надлишок",
-    //   "value": 22000
-    // }
   ];
 
   single2: any[]= [
@@ -41,14 +33,6 @@ export class CargoLotChartComponent implements OnInit {
       "value": 22000
     }
   ];
-
-  cards: any;
-  constructor() {
-    this.cards = [
-      { title: 'Card 1', cols: 1, rows: 2 },
-      { title: 'Card 2', cols: 1, rows: 1 },
-    ];
-  }
 
 
   /** Based on the screen size, switch from standard to one column per row */
