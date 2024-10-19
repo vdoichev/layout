@@ -1,30 +1,29 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Color, ScaleType} from "@swimlane/ngx-charts";
-import {EChartsOption} from "echarts";
 
 @Component({
   selector: 'app-cargo-lot-chart2',
   templateUrl: './cargo-lot-chart2.component.html',
   styleUrls: ['./cargo-lot-chart2.component.css']
 })
-export class CargoLotChart2Component implements OnInit {
+export class CargoLotChart2Component {
   @Input() title: string = "";
   single: any[]= [
     {
-      "name": "Оброблено",
-      "value": 550000
-    },
-    {
       "name": "В порту",
-      "value": 380000
+      "value": 125
     },
     {
-      "name": "Погоджено",
-      "value": 250000
+      "name": "На під'їзді",
+      "value": 47
     },
     {
-      "name": "Повернуто",
-      "value": 23000
+      "name": "В черзі",
+      "value": 13
+    },
+    {
+      "name": "В дорозі",
+      "value": 229
     },
   ];
 
@@ -35,45 +34,6 @@ export class CargoLotChart2Component implements OnInit {
     name: "test",
     selectable: true,
     group: ScaleType.Ordinal,
-    domain: ['#009473','#004A81','#FFD700', '#BE1E2D','#E0E0E0', '#BE1E2D']
-  }
-
-  /** Based on the screen size, switch from standard to one column per row */
-
-  public options: EChartsOption = {};
-  ngOnInit(): void {
-
-    this.options = {
-      title: {
-        text: 'Вага вантажної партії - 1 303 000 кг',
-        left: 'center'
-      },
-      darkMode: 'auto',
-      tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b}: {c} кг.'
-      },
-      legend: {
-        top: '55%',
-        left: 'center',
-      },
-      animation: true,
-      series: [
-        {
-          label: {
-            formatter: '{b}: {d}%'
-          },
-          color: ['#009473','#004A81','#FFD700', '#008cbc'],
-          name: 'Вага нетто в перепустках',
-          type: 'pie',
-          radius: ['40%', '70%'],
-          center: ['50%', '50%'],
-          // adjust the start and end angle
-          startAngle: 180,
-          endAngle: 360,
-          data: this.single
-        }
-      ]
-    };
+    domain: ['#004A81','#009473', '#FFD700', '#93a9d1']
   }
 }
