@@ -3,16 +3,13 @@
   <mat-grid-list cols="12" rowHeight="50px">
     <mat-grid-tile *ngFor="let card of cards; let index = index" [colspan]="card.cols" [rowspan]="card.rows">
       <app-cargo-lot-chart [title]="card.title" *ngIf="index===0">
-
       </app-cargo-lot-chart>
-
       <app-cargo-lot-chart2 [title]="card.title" *ngIf="index===1">
-
       </app-cargo-lot-chart2>
-
       <app-port-operator-cargo-forwarder-chart [title]="card.title" *ngIf="index===2">
-
       </app-port-operator-cargo-forwarder-chart>
+      <app-ticket-count-chart [title]="card.title" *ngIf="index===3">
+      </app-ticket-count-chart>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
