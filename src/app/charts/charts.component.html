@@ -1,6 +1,6 @@
 <div class="grid-container">
   <h1 class="mat-h1">Приклади візуалізації даних автомобільного модулю</h1>
-  <mat-grid-list cols="2" rowHeight="350px">
+  <mat-grid-list cols="12" rowHeight="50px">
     <mat-grid-tile *ngFor="let card of cards; let index = index" [colspan]="card.cols" [rowspan]="card.rows">
       <app-cargo-lot-chart [title]="card.title" *ngIf="index===0">
 

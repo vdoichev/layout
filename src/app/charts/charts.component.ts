@@ -9,9 +9,9 @@ export class ChartsComponent {
   cards: any;
   constructor() {
   this.cards = [
-      { title: 'Вантажна партія', cols: 1, rows: 1 },
-      { title: 'Черга в порт', cols: 1, rows: 1 },
-      { title: 'Кількість авто з вантажем на експорт за місяць', cols: 2, rows: 2 },
+      { title: 'Вантажна партія', cols: 6, rows: 7 },
+      { title: 'Черга в порт', cols: 6, rows: 7 },
+      { title: 'Кількість авто з вантажем на експорт за місяць', cols: 12, rows: 9 },
     ];
   }
 }

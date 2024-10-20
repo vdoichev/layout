@@ -29,7 +29,7 @@ export class CargoLotChart2Component {
 
   // options
   // options
-  gradient: boolean = true;
+  gradient: boolean = false;
   showLegend: boolean = true;
   showLabels: boolean = true;
   isDoughnut: boolean = false;
