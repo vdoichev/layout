@@ -15,10 +15,11 @@ export class TicketCountChartComponent implements OnInit {
   ngOnInit(): void {
 
     this.options = {
-      // title: {
-      //   text: 'Оформлено vs Прибуття в порт',
-      //   subtext: 'Fake Data'
-      // },
+      title: {
+        text: 'За тиждень з 01.10.2024 по 07.10.2024',
+        subtext: 'Fake Data',
+        left: 'center'
+      },
       tooltip: {
         trigger: 'axis',
         axisPointer: {
@@ -26,7 +27,8 @@ export class TicketCountChartComponent implements OnInit {
         }
       },
       legend: {
-        data: ["Оформлено", "В'їзд в порт", "Виїзд з порту"]
+        data: ["Оформлено", "В'їзд в порт", "Виїзд з порту"],
+        bottom: '5%',
       },
       toolbox: {
         show: true,
