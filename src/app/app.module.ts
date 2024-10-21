@@ -20,6 +20,7 @@ import { CargoLotChartComponent } from './charts/cargo-lot-chart/cargo-lot-chart
 import { CargoLotChart2Component } from './charts/cargo-lot-chart2/cargo-lot-chart2.component';
 import { PortOperatorCargoForwarderChartComponent } from './charts/port-operator-cargo-forwarder-chart/port-operator-cargo-forwarder-chart.component';
 import { TicketCountChartComponent } from './charts/ticket-count-chart/ticket-count-chart.component';
+import { TicketCountByOperatorChartComponent } from './charts/ticket-count-by-operator-chart/ticket-count-by-operator-chart.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TicketCountChartComponent } from './charts/ticket-count-chart/ticket-co
     CargoLotChartComponent,
     CargoLotChart2Component,
     PortOperatorCargoForwarderChartComponent,
-    TicketCountChartComponent
+    TicketCountChartComponent,
+    TicketCountByOperatorChartComponent
   ],
   imports: [
     BrowserModule,

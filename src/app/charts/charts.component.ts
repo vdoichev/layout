@@ -13,6 +13,7 @@ export class ChartsComponent {
       { title: 'Черга в порт', cols: 6, rows: 7 },
       { title: 'Кількість авто з вантажем на експорт за місяць', cols: 12, rows: 9 },
       { title: 'Кількість перепусток', cols: 12, rows: 9 },
+      { title: 'Кількість перепусток по операторам', cols: 12, rows: 9 },
     ];
   }
 }
