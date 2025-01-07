@@ -27,7 +27,7 @@ export class TicketCountChartComponent implements OnInit {
         }
       },
       legend: {
-        data: ["Оформлено", "В'їзд в порт", "Виїзд з порту"],
+        data: ["Оформлено", "Скасовано", "В'їзд в порт", "Виїзд з порту"],
         bottom: '5%',
       },
       toolbox: {
@@ -54,16 +54,35 @@ export class TicketCountChartComponent implements OnInit {
       ],
       series: [
         {
+          name: 'Скасовано',
+          type: 'bar',
+          color: ['#595959'],
+          stack: 'order',
+          data: [
+            10, 25, 76, 135, 162, 32, 20
+          ],
+          markPoint: {
+            data: [
+              {name: 'Max', value: 162, xAxis: 4, yAxis: 162},
+              {name: 'Min', value: 20, xAxis: 6, yAxis: 20}
+            ]
+          },
+          emphasis: {
+            focus: 'series'
+          },
+        },
+        {
           name: 'Оформлено',
           type: 'bar',
           color: ['#FFD700'],
+          stack: 'order',
           data: [
             232, 256, 767, 1356, 1622, 326, 200
           ],
           markPoint: {
             data: [
-              {name: 'Max', value: 1622, xAxis: 4, yAxis: 1622},
-              {name: 'Min', value: 200, xAxis: 6, yAxis: 200}
+              {name: 'Max', value: 1622, xAxis: 4, yAxis: 1784},
+              {name: 'Min', value: 200, xAxis: 6, yAxis: 220}
             ]
           },
           emphasis: {
