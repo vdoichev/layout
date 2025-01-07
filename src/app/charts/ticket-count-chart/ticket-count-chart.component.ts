@@ -9,6 +9,15 @@ import {EChartsOption} from "echarts";
 export class TicketCountChartComponent implements OnInit {
   @Input() title: string = "";
 
+  json = {
+    category: ['01.01.2025 8:00', '02.01.2025 8:00', '03.01.2025 8:00', '04.01.2025 8:00', '05.01.2025 8:00', '06.01.2025 8:00', '07.01.2025 8:00'],
+    data: [
+      { canceled: [10, 25, 76, 135, 162, 32, 20]},
+      { pending: [232, 256, 767, 1356, 1622, 326, 200]},
+      { in_port: [264, 287, 707, 1756, 1822, 487, 188]},
+      { approval: [334, 278, 890, 236, 564, 67, 233]},
+    ]
+  }
   /** Based on the screen size, switch from standard to one column per row */
 
   public options: EChartsOption = {};
@@ -44,7 +53,7 @@ export class TicketCountChartComponent implements OnInit {
         {
           type: 'category',
           // prettier-ignore
-          data: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Нд']
+          data: ['01.01.2025 8:00', '02.01.2025 8:00', '03.01.2025 8:00', '04.01.2025 8:00', '05.01.2025 8:00', '06.01.2025 8:00', '07.01.2025 8:00']
         }
       ],
       yAxis: [
